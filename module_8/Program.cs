@@ -10,18 +10,21 @@ namespace module_8
     {
         static void Main(string[] args)
         {
-            int size = 5; 
-            SquarIndex indexer = new SquarIndex(size);
+            SquaredArray myArray = new SquaredArray(5);
 
-            for (int i = 0; i < size; i++)
+            myArray[0] = 1;
+            myArray[1] = 2;
+            myArray[2] = 3;
+            myArray[3] = 4;
+            myArray[4] = 5;
+
+            for (int i = 0; i < 5; i++)
             {
-                indexer[i] = i;
+                Console.WriteLine($"Элемент[{i}] = {myArray[i]}");
             }
 
-            for (int i = 0; i < size; i++)
-            {
-                Console.WriteLine($"Element {i}: {indexer[i]}");
-            }
+            Console.ReadLine();
+        
         }
     }
 }
